@@ -6,20 +6,28 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            double leftOperand, rightOperand, result;
+            // > - Greater Than
+            // < - Less Than
+            // >= - Greater Than or Equal To
+            // <= - Less Than or Equal To
+            // == - Equal To
+            // != - Not Equal To
 
-            Console.WriteLine("Please enter the left operand: ");
-            leftOperand = int.Parse(Console.ReadLine());
+            // && - And (True if both are true)
+            // || - Or (True if one is true)
 
-            Console.WriteLine("Please enter the right operand: ");
-            rightOperand = int.Parse(Console.ReadLine());
-            
-            result = leftOperand * rightOperand;
+            string password;
 
-            Console.WriteLine("The result of "+leftOperand+" * "+rightOperand+ " is: "+result);
+            Console.WriteLine("Please enter your password: ");
+            password = Console.ReadLine();
 
-            // Remember that dividing an integer by an integer will always produce an integer (no decimals).
-            
+            if (password == "Hello123")
+            {
+                // This code is executed if the condition evaluates to true.
+                Console.WriteLine("The answer to life, the universe and everything is 42.");
+            }
+            // If the condition evaluates to false, nothing happens.
+
         }
     }
 }
