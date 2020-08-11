@@ -13,11 +13,16 @@ namespace FirstDemo
 
             if (number % 2 == 0)
             {
-                Console.WriteLine("The number "+number+" is even.");
+                // Concatenation
+                // Console.WriteLine("The number "+number+" is even.");
+                // Parameterized Output
+                // Console.WriteLine("The number {0} is even.", number);
+                // String Interpolation
+                Console.WriteLine($"The number {number} is even.");
             }
             else
             {
-                Console.WriteLine("The number "+number+" is odd.");
+                Console.WriteLine($"The number {number} is odd.");
             }
 
 
