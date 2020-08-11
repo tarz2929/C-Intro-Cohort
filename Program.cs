@@ -16,7 +16,7 @@ namespace FirstDemo
             bool boolean; // Bool stores a true or false value.
 
             string name; // Declare our variable.
-            int age;
+            int age, birthYear;
 
             Console.WriteLine("Please enter your name below:"); // Tell the user what we're expecting.
             name = Console.ReadLine(); // Assign a value to the variable (that we get from the user).
@@ -25,7 +25,10 @@ namespace FirstDemo
             age = int.Parse(Console.ReadLine()); // Convert the user's input to an integer and store it.
             // If the user enters something that isn't an integer, IT WILL BLOW UP.
 
-            Console.WriteLine("Hello, " + name + ". You are " + age + " years old."); // Retrieve the values from the variables and send them to the console.
+            birthYear = 2020 - age;
+
+            Console.WriteLine("Hello, " + name + ". You were born in the year " + birthYear + ", assuming your birthday this year has passed."); // Retrieve the values from the variables and send them to the console.
+
 
         }
     }
