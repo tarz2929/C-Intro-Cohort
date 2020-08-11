@@ -11,19 +11,8 @@ namespace FirstDemo
             Console.Write("Please enter a number: ");
             number = int.Parse(Console.ReadLine());
 
-            if (number % 2 == 0)
-            {
-                // Concatenation
-                // Console.WriteLine("The number "+number+" is even.");
-                // Parameterized Output
-                // Console.WriteLine("The number {0} is even.", number);
-                // String Interpolation
-                Console.WriteLine($"The number {number} is even.");
-            }
-            else
-            {
-                Console.WriteLine($"The number {number} is odd.");
-            }
+            // Ternary Expression
+            Console.WriteLine("The number "+number+" is "+ (number % 2 == 0 ? "even" : "odd") + ".");
 
 
         }
