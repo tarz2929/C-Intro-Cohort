@@ -9,9 +9,10 @@ namespace FirstDemo
 
             string name; // "Declare" (create) a variable using the datatype followed by the name.
 
-            name = "James"; // Assign a value to the variable.
+            Console.WriteLine("Please enter your name below:"); // Tell the user what we're expecting.
+            name = Console.ReadLine(); // Assign a value to the variable (that we get from the user).
 
-            Console.WriteLine(name); // Retrieve the value from the variable and send it to the console.
+            Console.WriteLine("Hello, " + name + "."); // Retrieve the value from the variable and send it to the console.
 
         }
     }
