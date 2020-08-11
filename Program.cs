@@ -25,7 +25,7 @@ namespace FirstDemo
             age = int.Parse(Console.ReadLine()); // Convert the user's input to an integer and store it.
             // If the user enters something that isn't an integer, IT WILL BLOW UP.
 
-            birthYear = 2020 - age;
+            birthYear = DateTime.Now.Year - age;
 
             Console.WriteLine("Hello, " + name + ". You were born in the year " + birthYear + ", assuming your birthday this year has passed."); // Retrieve the values from the variables and send them to the console.
 
