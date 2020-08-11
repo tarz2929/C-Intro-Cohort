@@ -6,27 +6,20 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            // > - Greater Than
-            // < - Less Than
-            // >= - Greater Than or Equal To
-            // <= - Less Than or Equal To
-            // == - Equal To
-            // != - Not Equal To
+            int number;
 
-            // && - And (True if both are true)
-            // || - Or (True if one is true)
+            Console.Write("Please enter a number: ");
+            number = int.Parse(Console.ReadLine());
 
-            string password;
-
-            Console.WriteLine("Please enter your password: ");
-            password = Console.ReadLine();
-
-            if (password == "Hello123")
+            if (number % 2 == 0)
             {
-                // This code is executed if the condition evaluates to true.
-                Console.WriteLine("The answer to life, the universe and everything is 42.");
+                Console.WriteLine("The number "+number+" is even.");
             }
-            // If the condition evaluates to false, nothing happens.
+            else
+            {
+                Console.WriteLine("The number "+number+" is odd.");
+            }
+
 
         }
     }
