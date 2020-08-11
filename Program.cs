@@ -16,33 +16,46 @@ namespace FirstDemo
                 Date of Last Edit: August 11, 2020
             */
 
-            int userNumber;
+            int menuChoice;
 
-            Console.Write("Please enter a number: ");
-            userNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Menu\n----------\n1. Option 1\n2. Option 2\n3. Option 3");
+            Console.Write("Please enter a menu choice: ");
+            menuChoice = int.Parse(Console.ReadLine());
 
-
-            if (Math.Sqrt(userNumber) % 1 == 0)
+            // Menu with a switch.
+            switch (menuChoice)
             {
-                Console.WriteLine("That number is a perfect square.");
+                case 1:
+                    // Do the option 1 stuff.
+                    break;
+                case 2:
+                    // Do the option 2 stuff.
+                    break;
+                case 3:
+                    // Do the option 3 stuff.
+                    break;
+                default:
+                    // Invalid menu choice.
+                    break;
             }
-            else 
+            
+            // Menu with a if/else
+            if (menuChoice == 1)
             {
-                Console.WriteLine("That number is not a perfect square.");
+                // Do the option 1 stuff.
             }
-
-
-
-            /*
-                Pseudo-code
-                -declare variables (input from user)
-                -get input from the user (number to check)
-                if the number is a perfect square 
-                    -output "number is perfect square"
-                otherwise
-                    -output "number is not perfect square"
-            */
-
+            else if (menuChoice == 2)
+            {
+                // Do the option 2 stuff.
+            }
+            else if (menuChoice == 3)
+            {
+                // Do the option 1 stuff.
+            }
+            else
+            {
+                // Invalid menu choice.
+            }
 
         }
     }
