@@ -1,0 +1,13 @@
+C:\TECHCareers\cohort4-2demos\FirstDemo\bin\Debug\netcoreapp3.1\FirstDemo.exe
+C:\TECHCareers\cohort4-2demos\FirstDemo\bin\Debug\netcoreapp3.1\FirstDemo.deps.json
+C:\TECHCareers\cohort4-2demos\FirstDemo\bin\Debug\netcoreapp3.1\FirstDemo.runtimeconfig.json
+C:\TECHCareers\cohort4-2demos\FirstDemo\bin\Debug\netcoreapp3.1\FirstDemo.runtimeconfig.dev.json
+C:\TECHCareers\cohort4-2demos\FirstDemo\bin\Debug\netcoreapp3.1\FirstDemo.dll
+C:\TECHCareers\cohort4-2demos\FirstDemo\bin\Debug\netcoreapp3.1\FirstDemo.pdb
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.csprojAssemblyReference.cache
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.AssemblyInfoInputs.cache
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.AssemblyInfo.cs
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.csproj.CoreCompileInputs.cache
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.dll
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.pdb
+C:\TECHCareers\cohort4-2demos\FirstDemo\obj\Debug\netcoreapp3.1\FirstDemo.genruntimeconfig.cache
