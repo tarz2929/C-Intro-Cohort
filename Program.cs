@@ -6,21 +6,26 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            int counter = 1; // Initialize step;
+            // string myString = "Hello, world!";
 
-            while (counter <= 10) // Test step;
+            // int counter = 0;
+            // while (counter < myString.Length) // Test step;
+            // {
+            //     Console.WriteLine($"String index {counter} is {myString[counter]}."); // Process step.
+            //     // counter = counter + 1; 
+            //     // counter += 1;
+            //     counter++; // Modify step.
+            // }
+            // Console.WriteLine("Done!");
+
+
+
+
+            string myString = "Hello, world!";
+
+            for (int i = 0 /* Initialize */; i < myString.Length /* Test */; i++ /* Modify */)
             {
-                Console.WriteLine($"Counter is at {counter}."); // Process step.
-                // counter = counter + 1; 
-                // counter += 1;
-                counter++; // Modify step.
-            }
-            Console.WriteLine("Done!");
-
-
-            for (int i = 1 /* Initialize */; i <= 10 /* Test */; i++ /* Modify */)
-            {
-                Console.WriteLine($"Counter is at {i}."); // Process
+                Console.WriteLine($"String index {i} is {myString[i]}.");
             }
             Console.WriteLine("Done!");
         }
