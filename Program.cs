@@ -16,6 +16,13 @@ namespace FirstDemo
                 counter++; // Modify step.
             }
             Console.WriteLine("Done!");
+
+
+            for (int i = 1 /* Initialize */; i <= 10 /* Test */; i++ /* Modify */)
+            {
+                Console.WriteLine($"Counter is at {i}."); // Process
+            }
+            Console.WriteLine("Done!");
         }
     }
 }
