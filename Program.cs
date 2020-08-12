@@ -6,32 +6,16 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            int menuOption;
-            
-            do
+            int counter = 1; // Initialize step;
+
+            while (counter <= 10) // Test step;
             {
-                Console.WriteLine("Menu\n------\n1. Option 1\n2. Option 2\n3. Option 3\n4. Option 4\n0. Exit");
-
-                Console.Write("Please enter a menu option:");
-                menuOption = int.Parse(Console.ReadLine());
-
-                switch (menuOption)
-                {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        Console.WriteLine("Running option {0}.", menuOption);
-                        break;
-                    case 0:
-                        Console.WriteLine("Exiting program...");
-                        break;
-                    default:
-                        Console.WriteLine("Not a valid menu option.");
-                        break;
-                }
-            } while (menuOption != 0);
-
+                Console.WriteLine($"Counter is at {counter}."); // Process step.
+                // counter = counter + 1; 
+                // counter += 1;
+                counter++; // Modify step.
+            }
+            Console.WriteLine("Done!");
         }
     }
 }
