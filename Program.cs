@@ -6,38 +6,31 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            string userInput;
-            bool valid = false;
+            int menuOption;
             
-            Console.Write("Please enter a single word that does not contain the letter e, and does not start with a capital letter: ");
-            userInput = Console.ReadLine();
-
-            while (!valid) 
+            do
             {
-                valid = true;
+                Console.WriteLine("Menu\n------\n1. Option 1\n2. Option 2\n3. Option 3\n4. Option 4\n0. Exit");
 
-                if (userInput.Contains(' '))
-                {
-                    valid = false;
-                    Console.WriteLine("Your input contains a space and is therefore more than one word.");
-                }
-                if (userInput.Contains('e'))
-                {
-                    valid = false;
-                    Console.WriteLine("Your input contains the letter e.");
-                }
-                if (char.IsUpper(userInput[0]))
-                {
-                    valid = false;
-                    Console.WriteLine("Your input has a first character that is a capital letter.");
-                }
+                Console.Write("Please enter a menu option:");
+                menuOption = int.Parse(Console.ReadLine());
 
-                if (!valid)
+                switch (menuOption)
                 {
-                    Console.Write("Please try again. Please enter a single word that does not contain the letter e, and does not start with a capital letter: ");
-                    userInput = Console.ReadLine();
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        Console.WriteLine("Running option {0}.", menuOption);
+                        break;
+                    case 0:
+                        Console.WriteLine("Exiting program...");
+                        break;
+                    default:
+                        Console.WriteLine("Not a valid menu option.");
+                        break;
                 }
-            }
+            } while (menuOption != 0);
 
         }
     }
