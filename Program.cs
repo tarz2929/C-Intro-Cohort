@@ -23,7 +23,7 @@ namespace FirstDemo
 
             string myString = "Hello, world!";
 
-            for (int i = 0 /* Initialize */; i < myString.Length /* Test */; i++ /* Modify */)
+            for (int i = myString.Length-1 /* Initialize */; i >= 0 /* Test */; i-- /* Modify */)
             {
                 Console.WriteLine($"String index {i} is {myString[i]}.");
             }
