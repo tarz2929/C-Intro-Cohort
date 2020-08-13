@@ -6,40 +6,26 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            int age = -1, favourite = -1;
+            int myNum = 5;
+            int[] myNumbers = {3, 7, 12, 42, 56, 100};
 
-            age = GetValidInt("Please enter your age: ", 1, 100);
-     
-            favourite = GetValidInt("Please enter your favourite number: ", 0, 1000);
+            int newNum = myNum;
+            int[] myNewNumbers = myNumbers;
 
-            Console.WriteLine($"Your age is {age}, your favourite number is {favourite}.");
+            Console.WriteLine("BEFORE:");
+            Console.WriteLine($"myNum: {myNum} | newNum: {newNum}");
+            Console.WriteLine($"myNumbers[1]: {myNumbers[1]} | newNumbers[1]: {myNewNumbers[1]}");
+            Console.WriteLine($"myNumbers[3]: {myNumbers[3]} | newNumbers[3]: {myNewNumbers[3]}");
 
 
+            myNewNumbers[3] = 125;
+            // will ALSO change myNumbers[3] to 125 because they are both pointing to the SAME array in memory
+
+            Console.WriteLine("AFTER:");
+            Console.WriteLine($"myNum: {myNum} | newNum: {newNum}");
+            Console.WriteLine($"myNumbers[1]: {myNumbers[1]} | newNumbers[1]: {myNewNumbers[1]}");
+            Console.WriteLine($"myNumbers[3]: {myNumbers[3]} | newNumbers[3]: {myNewNumbers[3]}");
         }
-        static int GetValidInt(string prompt, int min, int max)
-        {
-            bool valid = false;
-            int myInt = -1;
-
-            do
-            {
-                Console.Write(prompt);
-                try
-                {
-                    myInt = int.Parse(Console.ReadLine());
-                    if (myInt < min || myInt > max)
-                    {
-                        throw new Exception("Provided integer was outside of the bounds specified.");
-                    }
-                    valid = true;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Parse failed: {ex.Message}");
-                }
-            } while (!valid);
-
-            return myInt;
-        }
+        
     }
 }
