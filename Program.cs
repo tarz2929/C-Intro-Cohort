@@ -6,26 +6,58 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            int myNum = 5;
-            int[] myNumbers = {3, 7, 12, 42, 56, 100};
+            int[] myNumbers = new int[10];
 
-            int newNum = myNum;
-            int[] myNewNumbers = myNumbers;
+            PopulateArray(myNumbers);
 
-            Console.WriteLine("BEFORE:");
-            Console.WriteLine($"myNum: {myNum} | newNum: {newNum}");
-            Console.WriteLine($"myNumbers[1]: {myNumbers[1]} | newNumbers[1]: {myNewNumbers[1]}");
-            Console.WriteLine($"myNumbers[3]: {myNumbers[3]} | newNumbers[3]: {myNewNumbers[3]}");
+            // foreach is useful for shorthand output but CANNOT edit array items, they will be marked as readonly.
+            foreach(int number in myNumbers)
+            {
+                Console.WriteLine(number);
+            }
 
+            /*
+            The above loop is exactly the same as this:
 
-            myNewNumbers[3] = 125;
-            // will ALSO change myNumbers[3] to 125 because they are both pointing to the SAME array in memory
-
-            Console.WriteLine("AFTER:");
-            Console.WriteLine($"myNum: {myNum} | newNum: {newNum}");
-            Console.WriteLine($"myNumbers[1]: {myNumbers[1]} | newNumbers[1]: {myNewNumbers[1]}");
-            Console.WriteLine($"myNumbers[3]: {myNumbers[3]} | newNumbers[3]: {myNewNumbers[3]}");
+            for (int i = 0; i < myNumbers.Length; i++)
+            {
+                Console.WriteLine(myNumbers[i]);
+            }
+            */
         }
-        
+        // No return type due to the array being passed by reference (memory address) so any edits will affect the original.
+        static void PopulateArray(int[] theArray)
+        {
+            for(int i = 0; i < theArray.Length; i++)
+            {
+                theArray[i] = GetValidInt($"Please enter integer #{i+1}: ", 1, 100);
+            }
+        }
+
+        static int GetValidInt(string prompt, int min, int max)
+        {
+            bool valid = false;
+            int myInt = -1;
+
+            do
+            {
+                Console.Write(prompt);
+                try
+                {
+                    myInt = int.Parse(Console.ReadLine());
+                    if (myInt < min || myInt > max)
+                    {
+                        throw new Exception("Provided integer was outside of the bounds specified.");
+                    }
+                    valid = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Parse failed: {ex.Message}");
+                }
+            } while (!valid);
+
+            return myInt;
+        }
     }
 }
