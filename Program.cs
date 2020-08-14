@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FirstDemo
 {
@@ -6,58 +7,18 @@ namespace FirstDemo
     {
         static void Main(string[] args)
         {
-            int[] myNumbers = new int[10];
+            int[] intArray;
+            List<int> intList = new List<int>();
 
-            PopulateArray(myNumbers);
+            intList.Add(7);
 
-            // foreach is useful for shorthand output but CANNOT edit array items, they will be marked as readonly.
-            foreach(int number in myNumbers)
-            {
-                Console.WriteLine(number);
-            }
+            intList.Add(42);
 
-            /*
-            The above loop is exactly the same as this:
+            intList.Remove(7);
 
-            for (int i = 0; i < myNumbers.Length; i++)
-            {
-                Console.WriteLine(myNumbers[i]);
-            }
-            */
-        }
-        // No return type due to the array being passed by reference (memory address) so any edits will affect the original.
-        static void PopulateArray(int[] theArray)
-        {
-            for(int i = 0; i < theArray.Length; i++)
-            {
-                theArray[i] = GetValidInt($"Please enter integer #{i+1}: ", 1, 100);
-            }
-        }
+            intList.RemoveAt(0);
 
-        static int GetValidInt(string prompt, int min, int max)
-        {
-            bool valid = false;
-            int myInt = -1;
-
-            do
-            {
-                Console.Write(prompt);
-                try
-                {
-                    myInt = int.Parse(Console.ReadLine());
-                    if (myInt < min || myInt > max)
-                    {
-                        throw new Exception("Provided integer was outside of the bounds specified.");
-                    }
-                    valid = true;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Parse failed: {ex.Message}");
-                }
-            } while (!valid);
-
-            return myInt;
+            Console.WriteLine(intList.Count);
         }
     }
 }
