@@ -18,7 +18,14 @@ namespace FirstDemo
 
             intList.RemoveAt(0);
 
+            DoSomethingWithList(intList);
+
             Console.WriteLine(intList.Count);
+        }
+
+        static void DoSomethingWithList(List<int> myList)
+        {
+            myList.Add(12);
         }
     }
 }
